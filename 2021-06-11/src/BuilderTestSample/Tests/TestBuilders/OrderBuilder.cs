@@ -14,6 +14,7 @@ namespace BuilderTestSample.Tests.TestBuilders
             _order.Id = id;
             return this;
         }
+
         public OrderBuilder WithTestValues()
         {
             _order.TotalAmount = 100m;
