@@ -62,7 +62,6 @@ namespace BuilderTestSample.Tests
         public void ThrowsExceptionGivenOrderWithCustomerWithId0()
         {
             var customer = _customerBuilder
-                            .WithTestValues()
                             .WithId(0)
                             .Build();
             var order = _orderBuilder
@@ -77,7 +76,6 @@ namespace BuilderTestSample.Tests
         public void ThrowsExceptionGivenOrderWithCustomerWithNullAddress()
         {
             var customer = _customerBuilder
-                            .WithTestValues()
                             .WithAddress(null)
                             .Build();
             var order = _orderBuilder
@@ -98,7 +96,6 @@ namespace BuilderTestSample.Tests
         public void ThrowsExceptionGivenOrderWithCustomerWithEmptyFirstOrLastName(string firstName, string lastName)
         {
             var customer = _customerBuilder
-                            .WithTestValues()
                             .WithFirstName(firstName)
                             .WithLastName(lastName)
                             .Build();
@@ -118,7 +115,6 @@ namespace BuilderTestSample.Tests
         {
             // Arrange
             var customer = _customerBuilder
-                            .WithTestValues()
                             .WithCreditRating(rating)
                             .Build();
             var order = _orderBuilder

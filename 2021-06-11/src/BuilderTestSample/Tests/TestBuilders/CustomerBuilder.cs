@@ -14,6 +14,15 @@ namespace BuilderTestSample.Tests.TestBuilders
         private string _firstName;
         private int _creditRating;
 
+        public CustomerBuilder()
+        {
+            _id = TEST_CUSTOMER_ID;
+            _firstName = "first";
+            _lastName = "last";
+            _address = new Address();
+            _creditRating = TEST_CUSTOMER_CREDIT_RATING;
+        }
+
         public CustomerBuilder WithAddress(Address address)
         {
             _address = address;
@@ -38,16 +47,6 @@ namespace BuilderTestSample.Tests.TestBuilders
         public CustomerBuilder WithId(int id)
         {
             _id = id;
-            return this;
-        }
-        public CustomerBuilder WithTestValues()
-        {
-            _id = TEST_CUSTOMER_ID;
-            _firstName = "first";
-            _lastName = "last";
-            _address = new Address();
-            _creditRating = TEST_CUSTOMER_CREDIT_RATING;
-
             return this;
         }
 
