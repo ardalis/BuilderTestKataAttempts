@@ -39,6 +39,7 @@ namespace BuilderTestSample.Services
 
             if (customer.CreditRating <= 200) throw new InsufficientCreditException("Not a good enough credit rating.");
             // TODO: customer must have total purchases >= 0
+            if (customer.TotalPurchases <= 0) throw new InvalidCustomerException("Customer must have some purchases.");
 
             ValidateAddress(customer.HomeAddress);
         }

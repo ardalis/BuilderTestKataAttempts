@@ -33,7 +33,7 @@ namespace BuilderTestSample.Tests.TestBuilders
             _order.Id = 0;
             _order.TotalAmount = 100m;
 
-            _order.Customer = new CustomerBuilder().WithTestValues().Build();
+            _order.Customer = new CustomerBuilder().Build();
 
             return this;
         }
