@@ -10,6 +10,14 @@ namespace BuilderTestSample.Tests.TestBuilders
     {
         private Order _order = new Order();
 
+        public OrderBuilder()
+        {
+            _order.Id = 0;
+            _order.TotalAmount = 100m;
+
+            _order.Customer = new CustomerBuilder().Build();
+
+        }
         internal OrderBuilder WithCustomer(Customer customer)
         {
             _order.Customer = customer;
@@ -28,20 +36,9 @@ namespace BuilderTestSample.Tests.TestBuilders
             return this;
         }
 
-        public OrderBuilder WithTestValues()
-        {
-            _order.Id = 0;
-            _order.TotalAmount = 100m;
-
-            _order.Customer = new CustomerBuilder().Build();
-
-            return this;
-        }
-
         public Order Build()
         {
             return _order;
         }
-
     }
 }

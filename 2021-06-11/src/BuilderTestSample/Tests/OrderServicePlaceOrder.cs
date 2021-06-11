@@ -17,7 +17,6 @@ namespace BuilderTestSample.Tests
         public void CreatesOrderGivenOrderWithNoId()
         {
             var order = _orderBuilder
-                            .WithTestValues()
                             .WithId(0)
                             .Build();
 
@@ -30,7 +29,6 @@ namespace BuilderTestSample.Tests
         public void ThrowsExceptionGivenOrderWithExistingId()
         {
             var order = _orderBuilder
-                            .WithTestValues()
                             .WithId(123)
                             .Build();
 
@@ -41,7 +39,6 @@ namespace BuilderTestSample.Tests
         public void ThrowsExceptionGivenOrderWith0TotalAmount()
         {
             var order = _orderBuilder
-                            .WithTestValues()
                             .WithTotalAmount(0)
                             .Build();
 
@@ -52,7 +49,6 @@ namespace BuilderTestSample.Tests
         public void ThrowsExceptionGivenOrderWithNoAssociatedCustomer()
         {
             var order = _orderBuilder
-                            .WithTestValues()
                             .WithCustomer(null)
                             .Build();
 
@@ -66,7 +62,6 @@ namespace BuilderTestSample.Tests
                             .WithId(0)
                             .Build();
             var order = _orderBuilder
-                            .WithTestValues()
                             .WithCustomer(customer)
                             .Build();
 
@@ -80,7 +75,6 @@ namespace BuilderTestSample.Tests
                             .WithAddress(null)
                             .Build();
             var order = _orderBuilder
-                            .WithTestValues()
                             .WithCustomer(customer)
                             .Build();
 
@@ -101,7 +95,6 @@ namespace BuilderTestSample.Tests
                             .WithLastName(lastName)
                             .Build();
             var order = _orderBuilder
-                            .WithTestValues()
                             .WithCustomer(customer)
                             .Build();
 
@@ -119,7 +112,6 @@ namespace BuilderTestSample.Tests
                             .WithCreditRating(rating)
                             .Build();
             var order = _orderBuilder
-                            .WithTestValues()
                             .WithCustomer(customer)
                             .Build();
 
@@ -137,7 +129,6 @@ namespace BuilderTestSample.Tests
                             .WithTotalPurchases(0m)
                             .Build();
             var order = _orderBuilder
-                            .WithTestValues()
                             .WithCustomer(customer)
                             .Build();
 
