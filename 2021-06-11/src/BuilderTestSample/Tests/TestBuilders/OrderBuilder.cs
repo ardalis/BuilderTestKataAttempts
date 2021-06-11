@@ -15,8 +15,15 @@ namespace BuilderTestSample.Tests.TestBuilders
             return this;
         }
 
+        public OrderBuilder WithTotalAmount(decimal totalAmount)
+        {
+            _order.TotalAmount = totalAmount;
+            return this;
+        }
+
         public OrderBuilder WithTestValues()
         {
+            _order.Id = 0;
             _order.TotalAmount = 100m;
 
             // TODO: replace next lines with a CustomerBuilder you create
